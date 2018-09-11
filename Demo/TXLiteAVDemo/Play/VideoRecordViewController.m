@@ -13,6 +13,10 @@
 #import "VideoEditViewController.h"
 #import "MBProgressHUD.h"
 
+//----------哎吖科技添加 开始----------
+#import <AiyaEffectSDK/AiyaEffectSDK.h>
+//----------哎吖科技添加 结束----------
+
 #define BUTTON_RECORD_SIZE          75
 #define BUTTON_CONTROL_SIZE         32
 #define BUTTON_MASK_HEIGHT          170
@@ -113,6 +117,9 @@ TXVideoCustomProcessDelegate
     BOOL                            _isBackDelete;
     int                             _deleteCount;
     float                           _zoom;
+    //----------哎吖科技添加 开始----------
+    AYEffectHandler *effectHandler;
+    //----------哎吖科技添加 结束----------
 }
 @end
 
@@ -154,9 +161,29 @@ TXVideoCustomProcessDelegate
                                                    object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
         _appForeground = YES;
+        
+        //----------哎吖科技添加 开始----------
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(licenseMessage:) name:AiyaLicenseNotification object:nil];
+        [AYLicenseManager initLicense:@"61841d5e72c14f72a3f7a46a34f7eefe"];
+        //----------哎吖科技添加 结束----------
     }
     return self;
 }
+
+//----------哎吖科技添加 开始----------
+- (void)licenseMessage:(NSNotification *)notifi{
+    
+    AiyaLicenseResult result = [notifi.userInfo[AiyaLicenseNotificationUserInfoKey] integerValue];
+    switch (result) {
+        case AiyaLicenseSuccess:
+            NSLog(@"License 验证成功");
+            break;
+        case AiyaLicenseFail:
+            NSLog(@"License 验证失败");
+            break;
+    }
+}
+//----------哎吖科技添加 结束----------
 
 - (void)didReceiveMemoryWarning
 {
@@ -622,19 +649,19 @@ TXVideoCustomProcessDelegate
 {
     switch (btn.tag) {
         case SpeedMode_VerySlow:
-            [[TXUGCRecord shareInstance] setRate:0.5];
+            [[TXUGCRecord shareInstance] setRecordSpeed:0.5];
             break;
         case SpeedMode_Slow:
-            [[TXUGCRecord shareInstance] setRate:0.75];
+            [[TXUGCRecord shareInstance] setRecordSpeed:0.75];
             break;
         case SpeedMode_Standard:
-            [[TXUGCRecord shareInstance] setRate:1.0];
+            [[TXUGCRecord shareInstance] setRecordSpeed:1.0];
             break;
         case SpeedMode_Quick:
-            [[TXUGCRecord shareInstance] setRate:1.5];
+            [[TXUGCRecord shareInstance] setRecordSpeed:1.5];
             break;
         case SpeedMode_VeryQuick:
-            [[TXUGCRecord shareInstance] setRate:2.0];
+            [[TXUGCRecord shareInstance] setRecordSpeed:2.0];
             break;
         default:
             break;
@@ -1270,12 +1297,27 @@ TXVideoCustomProcessDelegate
     if (i++ % 100 == 0) {
         NSLog(@"onPreProcessTexture width:%f height:%f", width, height);
     }
+
+    //----------哎吖科技添加 开始----------
+    if (!effectHandler) {
+        effectHandler = [[AYEffectHandler alloc] init];
+        effectHandler.slimFace = 0.2;
+        effectHandler.bigEye = 0.2;
+        effectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
+    }
+    
+    [effectHandler processWithTexture:texture width:width height:height];
+    glFlush(); // 因为腾讯云使用的是共享纹理, 所以此行必须要加上
+    //----------哎吖科技添加 结束----------
     
     return texture;
 }
 
 - (void)onTextureDestoryed
 {
+    //----------哎吖科技添加 开始----------
+    effectHandler = nil;
+    //----------哎吖科技添加 结束----------
     NSLog(@"onTextureDestoryed");
 }
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233BA95821480F2E00D67C58 /* AiyaEffectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31F333D1FF3ADD100B042BD /* AiyaEffectSDK.framework */; };
+		233BA95A21480FF000D67C58 /* AiyaEffectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31F333D1FF3ADD100B042BD /* AiyaEffectSDK.framework */; };
+		233BA95B21480FF000D67C58 /* AiyaEffectSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D31F333D1FF3ADD100B042BD /* AiyaEffectSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		233BA95F2148109E00D67C58 /* gougou in Resources */ = {isa = PBXBuildFile; fileRef = D3DC8C1D1FE8F84700CB065E /* gougou */; };
+		233BA9602148109E00D67C58 /* AiyaEffectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3DC8C341FE8F87300CB065E /* AiyaEffectSDK.bundle */; };
+		233BA9622148149500D67C58 /* TXLiteAVSDK_UGC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233BA9612148149500D67C58 /* TXLiteAVSDK_UGC.framework */; };
 		40091CB71F4E7C42009B882D /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA0E2B1F447FF500D31507 /* TextCell.m */; };
 		40091CB81F4E7C43009B882D /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA0E2B1F447FF500D31507 /* TextCell.m */; };
 		40091CB91F4E7C44009B882D /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA0E2B1F447FF500D31507 /* TextCell.m */; };
@@ -1362,6 +1368,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		233BA95221480A6500D67C58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33331FF3ADD000B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 234D512F213396E9008286F0;
+			remoteInfo = "AyEffect-lite";
+		};
+		233BA95421480A6500D67C58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33331FF3ADD000B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2390F0D22133A00800104BE3;
+			remoteInfo = AiyaEffectSDKLite;
+		};
+		233BA95C21480FF000D67C58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33331FF3ADD000B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D37926E91FCD081A007DB5E8;
+			remoteInfo = AiyaEffectSDK;
+		};
 		D31F333C1FF3ADD100B042BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D31F33331FF3ADD000B042BD /* AiyaEffectSDK.xcodeproj */;
@@ -1421,6 +1448,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		233BA95E21480FF000D67C58 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				233BA95B21480FF000D67C58 /* AiyaEffectSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3DC8C3C1FE8F8A500CB065E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1435,6 +1473,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		233BA9612148149500D67C58 /* TXLiteAVSDK_UGC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TXLiteAVSDK_UGC.framework; path = ../SDK/TXLiteAVSDK_UGC.framework; sourceTree = "<group>"; };
 		40407ACA1F3035CA006C7301 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		404080C41F32C196006C7301 /* YTFaceSDK.licence */ = {isa = PBXFileReference; lastKnownFileType = file; name = YTFaceSDK.licence; path = Beauty/YTFaceSDK.licence; sourceTree = "<group>"; };
 		404082231F32C879006C7301 /* TXLiteAVDemoProfessional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXLiteAVDemoProfessional.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1923,6 +1962,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233BA9622148149500D67C58 /* TXLiteAVSDK_UGC.framework in Frameworks */,
+				233BA95821480F2E00D67C58 /* AiyaEffectSDK.framework in Frameworks */,
 				40E8D3251F333BD10097F311 /* Foundation.framework in Frameworks */,
 				40E8D3261F333BD10097F311 /* AVFoundation.framework in Frameworks */,
 				40E8D3271F333BD10097F311 /* MediaPlayer.framework in Frameworks */,
@@ -1939,6 +1980,7 @@
 				40E8D3331F333BD10097F311 /* Accelerate.framework in Frameworks */,
 				40E8D3341F333BD10097F311 /* Security.framework in Frameworks */,
 				40E8D3351F333BD10097F311 /* AssetsLibrary.framework in Frameworks */,
+				233BA95A21480FF000D67C58 /* AiyaEffectSDK.framework in Frameworks */,
 				40E8D3361F333BD10097F311 /* Bugly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2427,6 +2469,7 @@
 		40F854FF1EE8FD2F00EE47D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				233BA9612148149500D67C58 /* TXLiteAVSDK_UGC.framework */,
 				404082631F32D403006C7301 /* GLKit.framework */,
 				40407ACA1F3035CA006C7301 /* Foundation.framework */,
 				51A4AD391F1F8AE300B4A806 /* MediaPlayer.framework */,
@@ -2624,6 +2667,8 @@
 				D31F33431FF3ADD100B042BD /* libAyEffect.a */,
 				D31F33451FF3ADD100B042BD /* libAyBeauty.a */,
 				D31F33471FF3ADD100B042BD /* libAyShortVideoEffect.a */,
+				233BA95321480A6500D67C58 /* libAyEffect-lite.a */,
+				233BA95521480A6500D67C58 /* AiyaEffectSDKLite.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2765,10 +2810,12 @@
 				40E8D3241F333BD10097F311 /* Frameworks */,
 				40E8D3371F333BD10097F311 /* Resources */,
 				40E8D3E11F333BD10097F311 /* ShellScript */,
+				233BA95E21480FF000D67C58 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				233BA95D21480FF000D67C58 /* PBXTargetDependency */,
 			);
 			name = TXLiteAVDemoUGC;
 			productName = TXLiteAVDemo;
@@ -2810,7 +2857,8 @@
 						ProvisioningStyle = Automatic;
 					};
 					4094E3D21F32FE3000B78C46 = {
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = G29KBS7YUL;
+						ProvisioningStyle = Automatic;
 					};
 					4094E4561F330F8400B78C46 = {
 						ProvisioningStyle = Manual;
@@ -2819,7 +2867,8 @@
 						ProvisioningStyle = Manual;
 					};
 					40E8D2ED1F333BD10097F311 = {
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = G29KBS7YUL;
+						ProvisioningStyle = Automatic;
 					};
 					40F853021EE8FB3800EE47D7 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -2863,6 +2912,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		233BA95321480A6500D67C58 /* libAyEffect-lite.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAyEffect-lite.a";
+			remoteRef = 233BA95221480A6500D67C58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		233BA95521480A6500D67C58 /* AiyaEffectSDKLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AiyaEffectSDKLite.framework;
+			remoteRef = 233BA95421480A6500D67C58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D31F333D1FF3ADD100B042BD /* AiyaEffectSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -3482,6 +3545,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233BA95F2148109E00D67C58 /* gougou in Resources */,
+				233BA9602148109E00D67C58 /* AiyaEffectSDK.bundle in Resources */,
 				40E8D3381F333BD10097F311 /* qingxin@2x.png in Resources */,
 				FE2A3D071F6A2F37007B9BFB /* delete@2x.png in Resources */,
 				40E8D3391F333BD10097F311 /* add.png in Resources */,
@@ -4336,6 +4401,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		233BA95D21480FF000D67C58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AiyaEffectSDK;
+			targetProxy = 233BA95C21480FF000D67C58 /* PBXContainerItemProxy */;
+		};
 		D31F33491FF3ADF700B042BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AiyaEffectSDK;
@@ -4550,9 +4620,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G29KBS7YUL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TXLiteAVDemo",
@@ -4574,7 +4645,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.liteav.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyaapp.txav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4588,10 +4659,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = HKB8WPFBR9;
+				DEVELOPMENT_TEAM = G29KBS7YUL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TXLiteAVDemo",
@@ -4613,10 +4685,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.liteav.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyaapp.txav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ccc8c30b-8c31-4e62-91e3-d53ffc71aa05";
-				PROVISIONING_PROFILE_SPECIFIER = 0526DeviceManageIOSApp;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -4777,14 +4849,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G29KBS7YUL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TXLiteAVDemo",
 					"$(PROJECT_DIR)/../SDK",
+					"$(PROJECT_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
@@ -4802,7 +4876,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.liteav.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyaapp.txav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4816,15 +4890,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = HKB8WPFBR9;
+				DEVELOPMENT_TEAM = G29KBS7YUL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TXLiteAVDemo",
 					"$(PROJECT_DIR)/../SDK",
+					"$(PROJECT_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
@@ -4842,10 +4918,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.liteav.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyaapp.txav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ccc8c30b-8c31-4e62-91e3-d53ffc71aa05";
-				PROVISIONING_PROFILE_SPECIFIER = 0526DeviceManageIOSApp;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -5198,10 +5274,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = HKB8WPFBR9;
+				DEVELOPMENT_TEAM = G29KBS7YUL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TXLiteAVDemo",
@@ -5223,10 +5300,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.DeviceManageIOSApp.dailybuild;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyaapp.txav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ccc8c30b-8c31-4e62-91e3-d53ffc71aa05";
-				PROVISIONING_PROFILE_SPECIFIER = 0526DeviceManageIOSApp;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = DailyBuild;
 		};
@@ -5313,15 +5390,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = HKB8WPFBR9;
+				DEVELOPMENT_TEAM = G29KBS7YUL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TXLiteAVDemo",
 					"$(PROJECT_DIR)/../SDK",
+					"$(PROJECT_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
@@ -5339,10 +5418,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.DeviceManageIOSApp.dailybuild;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiyaapp.txav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ccc8c30b-8c31-4e62-91e3-d53ffc71aa05";
-				PROVISIONING_PROFILE_SPECIFIER = 0526DeviceManageIOSApp;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = DailyBuild;
 		};
