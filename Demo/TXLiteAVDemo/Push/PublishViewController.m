@@ -1346,10 +1346,10 @@ ScanQRDelegate
     
 //----------哎吖科技添加 开始----------
     if (!effectHandler) {
-        effectHandler = [[AYEffectHandler alloc] init];
+        effectHandler = [[AYEffectHandler alloc] initWithProcessTexture:YES];
         effectHandler.slimFace = 0.2;
         effectHandler.bigEye = 0.2;
-        effectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
+        effectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"mogulin"];
     }
 
     [effectHandler processWithTexture:texture width:width height:height];
@@ -1369,6 +1369,7 @@ ScanQRDelegate
     NSLog(@"onTextureDestoryed");
     
 //----------哎吖科技添加 开始----------
+    [effectHandler destroy];
     effectHandler = nil;
 //----------哎吖科技添加 结束----------
 

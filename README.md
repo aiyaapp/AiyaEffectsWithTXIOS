@@ -11,6 +11,7 @@
 ## 3. 注意事项
 * AiyaEffectSDK.xcodeproj 需要到 [AiyaEffectsSDK ios](https://github.com/aiyaapp/AiyaEffectsIOS) 项目下载
 * 因为腾讯云SDK体积超过了Github的100M上限, 所以需要先解压SDK.zip
+* [腾讯云移动直播版本](https://cloud.tencent.com/product/mlvb)
 
 ## 4. 反馈与建议
 - 主页: [宝宝特效](http://www.lansear.cn/product/bbtx)

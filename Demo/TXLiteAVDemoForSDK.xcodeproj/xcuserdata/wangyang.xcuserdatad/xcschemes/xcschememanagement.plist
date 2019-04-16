@@ -12,7 +12,7 @@
 		<key>TXLiteAVDemoEnterprise.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>6</integer>
 		</dict>
 		<key>TXLiteAVDemoPlayer.xcscheme</key>
 		<dict>
@@ -22,7 +22,7 @@
 		<key>TXLiteAVDemoPlayer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>3</integer>
 		</dict>
 		<key>TXLiteAVDemoProfessional.xcscheme</key>
 		<dict>
@@ -42,7 +42,7 @@
 		<key>TXLiteAVDemoPushStandard.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>TXLiteAVDemoPushUpgrade.xcscheme</key>
 		<dict>
@@ -52,7 +52,7 @@
 		<key>TXLiteAVDemoPushUpgrade.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>TXLiteAVDemoSmart.xcscheme</key>
 		<dict>
@@ -72,7 +72,7 @@
 		<key>TXLiteAVDemoUGC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>10</integer>
 		</dict>
 	</dict>
 </dict>
